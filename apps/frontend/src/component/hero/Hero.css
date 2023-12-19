@@ -1,0 +1,148 @@
+.Hero_Main {
+    width: 100%;
+    height: 90vh;
+    background-color: #D9DFE4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Hero_Main_Wrap {
+    width: 95%;
+    height: 100%;
+    background-color: #D9DFE4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.Hero_Main_Left {
+    height: 70vh;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.Hero_Main_Left img {
+    width: 50px;
+    height: 50px;
+}
+
+.Hero_Main_Left h3 {
+    color: #253D35;
+    font-family: 'Quicksand';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Hero_Main_Left button {
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: #253D35;
+    color: white;
+    cursor: pointer;
+}
+
+.Hero_Main_Middle {
+    height: 70vh;
+    width: 50%;
+    background-image: url('./Ellipse.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 40px;
+    /* background-color: yellow; */
+}
+
+.Hero_Slider {
+    width: 100%;
+}
+
+.Hero_Main_Right {
+    height: 70vh;
+    width: 30%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    /* background-color: red; */
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.Hero_Main_Right img {
+    width: 100px;
+}
+
+.Hero_Main_Right p {
+    width: 300px;
+    color: #253D35;
+    font-family: 'Quicksand';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.Hero_Main_Right button{
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: #253D35;
+    color: white;
+}
+.Hero_Call_TOAction {
+    width: 100%;
+    height: 10vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+}
+
+.Hero_Call_TOAction h2 {
+    color: #253D35;
+    font-family: 'Quicksand';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 30px;
+}
+
+.Hero_Product_Img {
+    width: 90%;
+    height: 500px;
+}
+
+.Hero_Product_Img img {
+    width: 400px;
+    height: 500px;
+    /* background-color: blue; */
+}
+
+.Hero_Product_Carousel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.Hero_Product_Price {
+    width: 10%;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: -320px;
+    left: 500px;
+}
