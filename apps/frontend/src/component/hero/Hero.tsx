@@ -7,11 +7,12 @@ function Hero() {
     const settings = {
         dots: false,
         infinite: true,
+        fade: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 4000,
-        autoplaySpeed: 2000,
+        speed: 1000,
+        autoplaySpeed: 3000,
         cssEase: "linear"
     };
     return (
