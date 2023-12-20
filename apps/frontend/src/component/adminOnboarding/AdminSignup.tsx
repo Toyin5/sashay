@@ -1,8 +1,11 @@
-import React from 'react'
-
+import './AdminSignup.css'
 function AdminSignup() {
   return (
-    <div>AdminSignup</div>
+    <div>
+      <div>
+
+      </div>
+    </div>
   )
 }
 
