@@ -20,6 +20,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@types/express-fileupload": "^1.4.4",
     "bcrypt": "^5.1.1",
     "cloudinary": "^1.41.1",
     "cors": "^2.8.5",
@@ -28,7 +29,10 @@
     "express-fileupload": "^1.4.3",
     "express-rate-limit": "^7.1.5",
     "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mailgen": "^2.0.28",
     "mongoose": "^8.0.3",
+    "nodemailer": "^6.9.7",
     "winston": "^3.11.0",
     "zod": "^3.22.4"
   }
