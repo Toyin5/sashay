@@ -14,14 +14,16 @@
     align-items: center;
 
 }
-
+.AdminLoginDont_HaveACcount{
+    display: none;
+}
 .AdminLogin_Left {
     width: 60%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-   flex-direction: column;
+    flex-direction: column;
     animation: fadeInRightBig;
     animation-duration: 0.5s;
 }
@@ -79,13 +81,15 @@
     gap: 5px;
     position: relative;
 }
-.AdminLogin_Email_Wrap p{
+
+.AdminLogin_Email_Wrap p {
     position: absolute;
     padding: 10px;
     top: -20px;
     left: 10px;
     background-color: white;
 }
+
 .AdminLogin_Email_Input {
     width: 100%;
     height: 50px;
@@ -222,4 +226,168 @@
 
 .AdminLogin_Key_Image img {
     width: 400px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 768px) {
+    .AdminLogin_Right {
+        display: none;
+    }
+    .AdminLoginDont_HaveACcount{
+        display: block;
+    }
+    .AdminLogin_Left {
+        width: 100%;
+    }
+
+    .AdminLogin_Main {
+        height: 100%;
+    }
+
+    .AdminLogin_Forgot_Remeberme {
+        /* width: 60%; */
+        display: flex;
+        justify-content: space-between;
+        /* background-color: red; */
+    }
+
+    .AdminLogin_Left_Wrap {
+        width: 100%;
+    }
+    .AdminLogin_Left_Wrap h2 {
+        color: #253D35;
+        text-align: center;
+        font-family: 'Quicksand';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 3.6px;
+    }
+    .AdminLogin_Form {
+        width: 80%;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        /* background-color: green; */
+    }
+
+    .AdminLogin_Email_Wrap p {
+        position: absolute;
+        /* padding: 10px; */
+        top: -15px;
+        left: 20px;
+        background-color: white;
+    }
+
+    .AdminLogin_Email_Input {
+        width: 350px;
+        height: 50px;
+        padding: 10px;
+        border-radius: 8px;
+        outline: none;
+        border: 1px solid #253D35;
+    }
+
+    .AdminLoginPassword_Input {
+        width: 350px;
+        height: 50px;
+        padding: 10px;
+        border: 1px solid #253D35;
+        border-radius: 8px;
+        outline: none;
+    }
+
+    .AdminLogin_Email_Wrap {
+        width: 350px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        
+    }
+    .AdminSignup2_Logo_Wrap{
+        width: 40%;
+        /* background-color: green; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 320px){
+    .AdminLogin_Email_Wrap p {
+        position: absolute;
+        /* padding: 10px; */
+        top: -15px;
+        left: 20px;
+        background-color: white;
+    }
+
+    .AdminLogin_Email_Input {
+        width: 300px;
+        height: 50px;
+        padding: 10px;
+        border-radius: 8px;
+        outline: none;
+        border: 1px solid #253D35;
+    }
+
+    .AdminLoginPassword_Input {
+        width: 300px;
+        height: 50px;
+        padding: 10px;
+        border: 1px solid #253D35;
+        border-radius: 8px;
+        outline: none;
+    }
+    .AdminLogin_Forgot_Remeberme {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        /* background-color: red; */
+    }
+    .AdminLogin_Forgot_Remeberme  p{
+        font-size: 14px;
+    }
+    .AdminLogin_Email_Wrap {
+        width: 300px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        
+    }
+    .AdminLogin_Form{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px){
+    .AdminLogin_Form{
+        width: 100%;
+    }
+    .AdminLogin_Forgot_Remeberme {
+        width: 45%;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        /* background-color: red; */
+    }
+}
+@media screen and (max-width: 425px){
+    .AdminLogin_Form{
+        width: 100%;
+    }
+    .AdminLogin_Forgot_Remeberme {
+        width: 80%;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        /* background-color: red; */
+    }
 }

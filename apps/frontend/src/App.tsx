@@ -7,6 +7,8 @@ import UserLogin from './component/userOnboarding/UserLogin'
 import UserSignup from './component/userOnboarding/UserSignup'
 import AdminSignup2 from './component/adminOnboarding/AdminSignup2'
 import AdminSIgnupImg from './component/adminOnboarding/AdminSIgnupImg'
+import AdminForgotPassword from './component/adminOnboarding/AdminForgotPassword'
+import AdminResetPassword from './component/adminOnboarding/AdminResetPassword'
 const App: React.FC = () => {
 
   return (
@@ -18,6 +20,8 @@ const App: React.FC = () => {
             <Route path='adminsignup' element={<AdminSignup/>}/>
             <Route path='adminsignup2' element={<AdminSignup2/>}/>
             <Route path='adminsignup3' element={<AdminSIgnupImg/>}/>
+            <Route path='adminforgotpassword' element={<AdminForgotPassword/>}/>
+            <Route path='adminresetpassword/:id' element={<AdminResetPassword/>}/>
             <Route path='userlogin' element={<UserLogin/>}/>
             <Route path='usersignup' element={<UserSignup/>}/>
          </Routes>

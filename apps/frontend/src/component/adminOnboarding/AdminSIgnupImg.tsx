@@ -15,25 +15,25 @@ function AdminSIgnupImg() {
       </div>
       <div className='AdminSIgnupImg_Body'>
         <h2>Choose an Avatar</h2>
-        <p style={{fontSize:'24px'}}>according to your gender </p>
+        <p style={{ fontSize: '24px' }}>according to your gender </p>
         <div className='AdminSIgnupImg_Avatar_Wrap'>
           <img src="./male.svg" alt="" className='Avatar' />
           <img src="./female.svg" alt="" className='Avatar2' />
         </div>
         <p>or</p>
-        <span style={{display:'flex', alignItems:'center', gap:'5px', marginTop:'20px'}}>
-           <p>Upload your image</p>
-           <p>here</p>
+        <span style={{ display: 'flex', alignItems: 'center', gap: '5px', marginTop: '20px' }}>
+          <p>Upload your image</p>
+          <p>here</p>
         </span>
-        <div style={{marginTop:'20px'}}>
+        <div style={{ marginTop: '20px' }}>
           <button className='AdminSignupImg_Button'>Complete Sign Up</button>
         </div>
 
-        <span className='AdminLogin_Terms_Condition' style={{marginTop:'30px'}}>
-              <p>Privacy</p>
-              <p>x</p>
-              <p>Terms an condition</p>
-            </span>
+        <span className='AdminLogin_Terms_Condition' style={{ marginTop: '30px' }}>
+          <p>Privacy</p>
+          <p>x</p>
+          <p>Terms an condition</p>
+        </span>
       </div>
     </div>
   )
