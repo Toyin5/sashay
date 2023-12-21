@@ -18,6 +18,7 @@
 
 .AdminSIgnupImg_Header img {
     width: 100px;
+    cursor: pointer;
 
 }
 
@@ -53,6 +54,8 @@
 .AdminSignupimg_Goback_Arrow {
     display: flex;
     align-items: center;
+    cursor: pointer;
+
 }
 
 .AdminSIgnupImg_Avatar_Wrap {

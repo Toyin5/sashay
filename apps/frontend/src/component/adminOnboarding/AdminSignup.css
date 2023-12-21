@@ -180,6 +180,7 @@ input:focus::-ms-placeholder{
 .AdminSignup2_Logo_Wrap img{
   width: 100px;
   height: 100px;
+  cursor: pointer;
 }
 .AdminSignup2_next_button_wrap{
     width: 78%;
