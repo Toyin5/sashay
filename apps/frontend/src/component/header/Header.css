@@ -18,6 +18,10 @@
     display: flex;
     align-items: center;
 }
+.Header_Main_Logo_Wrap img{
+    width: 100px;
+    height: 80px;
+}
 .Header_Main_Nav_Wrap{
     width: 50%;
     height: 100%;

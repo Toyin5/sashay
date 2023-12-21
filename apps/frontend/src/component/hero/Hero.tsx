@@ -3,6 +3,7 @@ import { ProductCarousel } from "../data"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { TypeAnimation } from "react-type-animation";
 function Hero() {
     const settings = {
         dots: false,
@@ -53,7 +54,50 @@ function Hero() {
                 </div>
             </div>
             <div className="Hero_Call_TOAction">
-                <h2>INSPIRED BY A ELEGANCE</h2>
+            <h2>
+                <TypeAnimation
+                    sequence={[
+                        'INSPIRED BY ELEGANCE',
+                        3000,
+                        'INSPIRED BY GLAMOUR',
+                        3000,
+                        'INSPIRED BY SOPHISTICATION',
+                        3000,
+                        'INSPIRED BY VOGUE',
+                        3000,
+                        'INSPIRED BY COUTURE',
+                        3000,
+                        'INSPIRED BY OPULENCE',
+                        3000,
+                        'INSPIRED BY GRACE',
+                        3000,
+                        'INSPIRED BY PANACHE',
+                        3000,
+                        'INSPIRED BY STYLISHNESS',
+                        3000,
+                        'INSPIRED BY TREND',
+                        3000,
+                        'INSPIRED BY SARTORIAL',
+                        3000,
+                        'INSPIRED BY DAPPER',
+                        3000,
+                        'INSPIRED BY SLEEKNESS',
+                        3000,
+                        'INSPIRED BY GRACEFULNESS',
+                        3000,
+                        'INSPIRED BY LUXURY',
+                        3000,
+                        'INSPIRED BY FASHION',
+                        3000,
+                        'INSPIRED BY AESTHETIC LIFE',
+                        3000,
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    style={{ fontSize: '2em', display: 'inline-block' }}
+                    repeat={Infinity}
+                />
+                </h2>
             </div>
         </div>
     )

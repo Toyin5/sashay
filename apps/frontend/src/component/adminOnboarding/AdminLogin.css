@@ -1,0 +1,225 @@
+.AdminLogin_Main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AdminLogin_Wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.AdminLogin_Left {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   flex-direction: column;
+    animation: fadeInRightBig;
+    animation-duration: 0.5s;
+}
+
+.AdminLogin_Right {
+    width: 40%;
+    height: 100%;
+    background-color: #253D35;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    animation: fadeInLeftBig;
+    animation-duration: 1s;
+}
+
+
+.AdminLogin_Left_Wrap {
+    width: 70%;
+    height: 90%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.AdminLogin_Left_Wrap h2 {
+    color: #253D35;
+    text-align: center;
+    font-family: 'Quicksand';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 3.6px;
+}
+
+.AdminLogin_Form {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    /* background-color: red; */
+}
+
+.AdminLogin_Email_Wrap {
+    width: 500px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+.AdminLogin_Email_Wrap p{
+    position: absolute;
+    padding: 10px;
+    top: -20px;
+    left: 10px;
+    background-color: white;
+}
+.AdminLogin_Email_Input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #253D35;
+}
+
+.AdminLoginPassword_Input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #253D35;
+    border-radius: 8px;
+    outline: none;
+}
+
+.AdminLogin_Forgot_Remeberme {
+    width: 80%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Admin_login_signin_button {
+    width: 250px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    font-size: 25px;
+    background: #253D35;
+    color: white;
+    cursor: pointer;
+    font-family: 'Quicksand';
+
+}
+
+.AdminLogin_Terms_Condition {
+    display: flex;
+    gap: 20px;
+    color: #7A8984;
+    text-align: center;
+    font-family: 'Quicksand';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.54px;
+}
+
+.AdminLogin_Right_Wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    flex-direction: column;
+}
+
+.LoginGreetings {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Quicksand';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.AdminLoginSmiley {
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.AdminLogin_Explanation {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Quicksand';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4;
+    /* 150% */
+    letter-spacing: 3.3px;
+}
+
+.AdminLogin_Dont_have_account {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.AdminLogin_Dont_have_account p {
+    color: #7A8984;
+    text-align: center;
+    font-family: 'Quicksand';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 3.52px;
+}
+
+.AdminLogin_Dont_have_account button {
+    width: 250px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 25px;
+    font-family: 'Quicksand';
+    cursor: pointer;
+
+}
+
+.AdminLogin_Key_Image {
+    width: 300px;
+    height: 200px;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+}
+
+.AdminLogin_Key_Image img {
+    width: 400px;
+}

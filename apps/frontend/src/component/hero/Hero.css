@@ -111,11 +111,11 @@
 .Hero_Call_TOAction h2 {
     color: #253D35;
     font-family: 'Quicksand';
-    font-size: 30px;
+    font-size:15px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: 30px;
+    letter-spacing: 20px;
 }
 
 .Hero_Product_Img {

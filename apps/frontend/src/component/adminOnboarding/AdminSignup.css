@@ -1,0 +1,183 @@
+.AdminSignup_Left {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   flex-direction: column;
+    animation: slideInRight;
+    animation-duration: 0.5s;
+}
+
+.AdminSignup_Right {
+    width: 40%;
+    height: 100%;
+    background-color: #253D35;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    animation: slideInLeft;
+    animation-duration: 1s;
+}
+
+.AdminSignup2_Main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.AdminSignup2_Body{
+    width: 90%;
+    height: 85vh;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+.Adminsignup2_Left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+.AdminSignup2_Left_img_wrap {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.AdminSignup2_Left_img_wrap img{
+    width: 100%;
+}
+.AdminSignup2Right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.AdminSignup2Right h2 {
+    color: #253D35;
+    font-family: 'Quicksand';
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 5.76px;
+}
+
+.AdminSignup2Right p {
+    color: #253D35;
+    font-family: 'Quicksand';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    /* margin-bottom: ; */
+}
+
+.AdminSignup2_Form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+.AdminSignup2_PhoneNumber_Wrap{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #253D35;
+    border-radius: 8px;
+}
+.AdminSignup2_PhoneNumber_Wrap input{
+    width: 350px;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+.AdminSignup2_PhoneNumber_Wrap p{
+    height: 50px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9D9D9;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px 0px 0px 8px;
+    /* border-right: 1px solid #253D35; */
+}
+.AdminSignup2_Label_PhoneNumber{
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+}
+.AdminSignup2_Label_Username{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    /* background-color: red; */
+}
+.AdminSignup2_Label_Username input{
+    width: 500px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #253D35;
+    border-radius: 8px;
+    border-radius: 8px;
+    outline: none;
+}
+.AdminSignup2_Label_Username p{
+   position: absolute;
+   padding: 10px;
+   top: -28px;
+   left: 10px;
+   background-color: white;
+}
+input:focus::-webkit-input-placeholder{
+    opacity: 0;
+}
+input:focus::-moz-placeholder{
+    opacity: 0;
+}
+input:focus::-ms-placeholder{
+    opacity: 0;
+}
+.AdminSignup2_next_button{
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background: #253D35;
+    color: white;
+    cursor: pointer;
+}
+.AdminSignup_Goback_Arrow{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    top: -100px;
+    left: 150px;
+}
+.AdminSignup2_Logo_Wrap img{
+  width: 100px;
+  height: 100px;
+}
