@@ -40,7 +40,8 @@
     line-height: normal;
     letter-spacing: 5.76px;
 }
-.AdminSIgnupImg_Body p{
+
+.AdminSIgnupImg_Body p {
     color: #253D35;
     font-family: 'Quicksand';
     font-style: normal;
@@ -52,12 +53,14 @@
 .AdminSignupimg_Goback_Arrow {
     display: flex;
     align-items: center;
-    margin-right: 60px;
 }
 
 .AdminSIgnupImg_Avatar_Wrap {
     display: flex;
     gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .Avatar {
@@ -80,3 +83,175 @@
     font-family: 'Quicksand';
     cursor: pointer;
 }
+
+@media screen and (max-width: 320px) {
+    .AdminSIgnupImg_Header_Img_div{
+     width: 300px;
+     /* background-color: green; */
+    }
+    .AdminSignupimg_Goback_Arrow{
+     width: 300px;
+     height: 100%;
+     /* background-color: blue; */
+     display: flex;
+
+    }
+    .AdminSIgnupImg_Header {
+        width: 100%;
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: red; */
+    }
+    
+    .AdminSIgnupImg_Header img {
+        width: 100px;
+    
+    }
+    .AdminSIgnupImg_Body {
+        width: 100%;
+        height: 85%;
+        /* gap: 20px; */
+    }
+
+    .AdminSIgnupImg_Body h2 {
+        font-size: 20px;
+    }
+
+    .AdminSIgnupImg_Body p {
+        font-size: 10px;
+    }
+
+    .Avatar {
+        width: 100px;
+    }
+
+    .Avatar2 {
+        width: 130px;
+    }
+    .AdminSignupImg_Button {
+        width: 280px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        background-color: #253D35;
+        color: white;
+        font-size: 20px;
+        font-family: 'Quicksand';
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .AdminSIgnupImg_Body {
+        width: 100%;
+        height: 85%;
+        /* gap: 20px; */
+    }
+
+    .AdminSIgnupImg_Body h2 {
+        font-size: 20px;
+    }
+
+    .AdminSIgnupImg_Body p {
+        font-size: 10px;
+    }
+
+    .Avatar {
+        width: 100px;
+    }
+
+    .Avatar2 {
+        width: 130px;
+    }
+    .AdminSignupImg_Button {
+        width: 280px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        background-color: #253D35;
+        color: white;
+        font-size: 20px;
+        font-family: 'Quicksand';
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .AdminSIgnupImg_Body {
+        width: 100%;
+        height: 85%;
+        /* gap: 20px; */
+    }
+
+    .AdminSIgnupImg_Body h2 {
+        font-size: 20px;
+    }
+
+    .AdminSIgnupImg_Body p {
+        font-size: 10px;
+    }
+
+    .Avatar {
+        width: 100px;
+    }
+
+    .Avatar2 {
+        width: 130px;
+    }
+    .AdminSignupImg_Button {
+        width: 280px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        background-color: #253D35;
+        color: white;
+        font-size: 20px;
+        font-family: 'Quicksand';
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .AdminSIgnupImg_Body {
+        width: 100%;
+        height: 85%;
+        /* gap: 20px; */
+    }
+
+    .AdminSIgnupImg_Body h2 {
+        font-size: 20px;
+    }
+
+    .AdminSIgnupImg_Body p {
+        font-size: 10px;
+    }
+
+    .Avatar {
+        width: 100px;
+    }
+
+    .Avatar2 {
+        width: 130px;
+    }
+    .AdminSignupImg_Button {
+        width: 280px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        background-color: #253D35;
+        color: white;
+        font-size: 20px;
+        font-family: 'Quicksand';
+        cursor: pointer;
+    }
+}
+
+/* @media screen and (max-width: 375px){
+    
+} */

@@ -7,7 +7,9 @@ function AdminSIgnupImg() {
   return (
     <div className='AdminSIgnupImg_Main'>
       <div className='AdminSIgnupImg_Header'>
-        <img src="./Logo.svg" alt='logo' />
+        <div className='AdminSIgnupImg_Header_Img_div'>
+          <img src="./Logo.svg" alt='logo' />
+        </div>
         <div className='AdminSignupimg_Goback_Arrow' onClick={() => navigate('/adminsignup2')}>
           <IoIosArrowRoundBack style={{ color: '#253D35', width: '40px', height: '40px' }} />
           <p>Go Back</p>
@@ -15,12 +17,12 @@ function AdminSIgnupImg() {
       </div>
       <div className='AdminSIgnupImg_Body'>
         <h2>Choose an Avatar</h2>
-        <p style={{ fontSize: '24px' }}>according to your gender </p>
+        <p>according to your gender </p>
         <div className='AdminSIgnupImg_Avatar_Wrap'>
           <img src="./male.svg" alt="" className='Avatar' />
+          <p>or</p>
           <img src="./female.svg" alt="" className='Avatar2' />
         </div>
-        <p>or</p>
         <span style={{ display: 'flex', alignItems: 'center', gap: '5px', marginTop: '20px' }}>
           <p>Upload your image</p>
           <p>here</p>

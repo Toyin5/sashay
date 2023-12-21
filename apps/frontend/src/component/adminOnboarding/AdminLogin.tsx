@@ -18,7 +18,7 @@ function AdminLogin() {
               <input placeholder='example@gmail.com' className='AdminLogin_Email_Input' />
             </label>
             <label className='AdminLogin_Email_Wrap'>
-              <input placeholder='password' className='AdminLoginPassword_Input' />
+              <input placeholder='Password' className='AdminLoginPassword_Input' />
             </label>
             <div className='AdminLogin_Forgot_Remeberme'>
               <span style={{ display: "flex", alignItems: "center", gap: "5px", fontFamily:'Quicksand' }}>
@@ -27,7 +27,7 @@ function AdminLogin() {
               </span>
               <p style={{fontFamily:'Quicksand', cursor:'pointer'}} onClick={()=>navigate('/adminforgotpassword')}>Forgot Password</p>
             </div>
-            <p style={{fontFamily:'Quicksand', color:'#253d35'}} className='AdminLoginDont_HaveACcount'>Don't have an account? Sign up here</p>
+            <p onClick={()=>navigate('/adminsignup')}style={{fontFamily:'Quicksand', color:'#253d35'}} className='AdminLoginDont_HaveACcount'>Don't have an account? Sign up here</p>
             <div>
               <button className='Admin_login_signin_button'>Sign in</button>
             </div>

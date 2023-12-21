@@ -24,7 +24,7 @@ function AdminSignup2() {
                     </span>
                 </div>
                 <div className='AdminSignup2Right'>
-                    <h2>Personal <br />Details</h2>
+                    <h2>Personal Details</h2>
                     <p style={{ marginBottom: '20px' }}>We just need you to fill in some details. </p>
                     <form className='AdminSignup2_Form'>
                         <label className='AdminSignup2_Label_Username'>
@@ -38,10 +38,10 @@ function AdminSignup2() {
                         <label className='AdminSignup2_Label_PhoneNumber'>
                             <div className='AdminSignup2_PhoneNumber_Wrap'>
                                 <p>+234</p>
-                                <input placeholder='Phone number' />
+                                <input placeholder='Phone number' className='AdminSignup2PhoneNumber'/>
                             </div>
                         </label>
-                        <div style={{ width: '70%', display: 'flex', justifyContent: 'flex-end' }}>
+                        <div className='AdminSignup2_next_button_wrap'>
                             <button className='AdminSignup2_next_button' onClick={() => navigate('/adminsignup3')}>Next</button>
                         </div>
                     </form>

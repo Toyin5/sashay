@@ -181,3 +181,234 @@ input:focus::-ms-placeholder{
   width: 100px;
   height: 100px;
 }
+.AdminSignup2_next_button_wrap{
+    width: 78%;
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: yellow; */
+}
+@media screen and (min-width: 200px) and (max-width: 768px){
+    .AdminSignup_Right{
+        display: none;
+    }
+    .AdminSignup2Right h2{
+        font-size: 40px;
+    }
+    .Adminsignup2_Left{
+        display: none;
+    }
+    .AdminSignup2Right{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .AdminSignup2_Form{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .AdminSignup2_Label_Username{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+        /* background-color: red; */
+    }
+    .AdminSignup2_Label_Username p{
+        position: absolute;
+        padding: 10px;
+        top: -28px;
+        left: 180px;
+        background-color: white;
+     }
+    .AdminSignup2_Label_Username input{
+        width: 380px;
+    }
+    .AdminSignup2_Label_PhoneNumber{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .AdminSignup2_PhoneNumber_Wrap{
+        width: 380px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #253D35;
+        border-radius: 8px;
+    }
+    .AdminSignup2PhoneNumber{
+        width: 380px;
+
+    }
+    .AdminSignup2_next_button_wrap{
+        width: 380px;
+        display: flex;
+        justify-content: center;
+    }
+    .AdminSignup2_next_button{
+        width: 380px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        background: #253D35;
+        color: white;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width: 375px){
+    .AdminSignup2_Label_Username p{
+        position: absolute;
+        padding: 10px;
+        top: -28px;
+        left: 30px;
+        background-color: white;
+     }
+     .AdminSignup2Right h2{
+        font-size: 30px;
+    }
+    .AdminSignup2Right p{
+        font-size: 15px;
+        text-align: center;
+    }
+     .AdminSignup2_PhoneNumber_Wrap{
+        width: 300px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #253D35;
+        border-radius: 8px;
+    }
+    .AdminSignup2PhoneNumber{
+        width: 300px;
+
+    }
+    .AdminSignup2_Label_Username input{
+        width: 300px;
+    }
+    .AdminSignup2_next_button_wrap{
+        width: 300px;
+        display: flex;
+        justify-content: center;
+    }
+    .AdminSignup2_next_button{
+        width: 300px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        background: #253D35;
+        color: white;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width: 428px){
+    .AdminSignup2_Label_Username p{
+        position: absolute;
+        padding: 10px;
+        top: -28px;
+        left: 30px;
+        background-color: white;
+     }
+     .AdminSignup2_PhoneNumber_Wrap{
+        width: 350px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #253D35;
+        border-radius: 8px;
+    }
+    .AdminSignup2PhoneNumber{
+        width: 350px;
+
+    }
+    .AdminSignup2_Label_Username input{
+        width: 350px;
+    }
+    .AdminSignup2_next_button_wrap{
+        width: 350px;
+        display: flex;
+        justify-content: center;
+    }
+    .AdminSignup2Right h2{
+        font-size: 30px;
+    }
+    .AdminSignup2Right p{
+        font-size: 20px;
+        text-align: center;
+    }
+    .AdminSignup2_next_button{
+        width: 350px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        background: #253D35;
+        color: white;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width: 320px){
+    .AdminSignup2_Label_Username p{
+        position: absolute;
+        padding: 10px;
+        top: -28px;
+        left: 30px;
+        background-color: white;
+        font-size: 15px;
+     }
+     .AdminSignup2Right h2{
+        font-size: 20px;
+        font-weight: 700;
+    }
+     .AdminSignup2_PhoneNumber_Wrap{
+        width: 280px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #253D35;
+        border-radius: 8px;
+    }
+    .AdminSignup2PhoneNumber{
+        width: 280px;
+
+    }
+    .AdminSignup2_Label_Username input{
+        width: 280px;
+    }
+    .AdminSIgnupImg_Header{
+        /* background-color: red; */
+        display: flex;
+        justify-content: space-between;
+    }
+    .AdminSignupimg_Goback_Arrow{
+        width: 50%;
+        margin-left: 40px;
+        /* background-color: green; */
+    }
+    .AdminSIgnupImg_Header img{
+        width:80px;
+        height: 80px;
+    }
+    .AdminSignup2_next_button_wrap{
+        width: 280px;
+        display: flex;
+        justify-content: center;
+    }
+    .AdminSignup2_next_button{
+        width: 280px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        background: #253D35;
+        color: white;
+        cursor: pointer;
+    }
+    .AdminSignup2Right p{
+        font-size: 13px;
+        text-align: center;
+    }
+}
