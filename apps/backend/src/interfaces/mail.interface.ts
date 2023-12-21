@@ -1,13 +1,11 @@
 interface mailInterface {
   email: string;
-  to: string
   subject: string;
   from: {
     name?: string,
-    address: string
+    address: string | undefined
   },
   message: string;
   html: string
 }
-
 export default mailInterface;

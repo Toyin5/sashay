@@ -70,10 +70,9 @@ export const signUpUser: RequestHandler = async (req, res) => {
       from: {
         address: <string>process.env.EMAIL
       },
-      email: email,
-      subject: "Verification Code!",
+      email: userInstance.email,
+      subject: "Kindly verify!",
       message: emailText,
-      to: email,
       html: emailBody
     });
 
