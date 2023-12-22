@@ -4,7 +4,7 @@ const mailGenerator = new MailGen({
   theme: "default",
   product: {
     name: "Sashay",
-    logo: "Sashay",
+    logo: "http://localhost:5173/Logo.svg",
     link: "#"
   }
 });

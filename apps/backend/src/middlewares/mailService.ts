@@ -26,9 +26,9 @@ export default class mailSender {
     })
     try {
       await this.transporter.verify();
-      // console.log("MailSender connection established successfully.");
+      console.log("MailSender connection established successfully.");
     } catch (error) {
-      // console.error("Error establishing MailSender connection:", error);
+      console.error("Error establishing MailSender connection:", error);
     }
   };
   async mail(Option: mailInterface) {

@@ -3,7 +3,7 @@ import cloudinary from "../utils/cloudinary";
 import { UploadedFile } from "express-fileupload";
 
 
-export const uploadUserPhoto = async (req: Request, res: Response, next: NextFunction) => {
+export const uploadPhoto = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const file = req.files?.image as UploadedFile[];
 
