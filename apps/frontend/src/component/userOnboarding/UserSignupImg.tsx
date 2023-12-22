@@ -1,7 +1,7 @@
-import './AdminSIgnupImg.css'
+
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
-function AdminSIgnupImg() {
+function UserSignupImg() {
   const navigate = useNavigate()
 
   return (
@@ -10,7 +10,7 @@ function AdminSIgnupImg() {
         <div className='AdminSIgnupImg_Header_Img_div'>
           <img src="./Logo.svg" alt='logo' />
         </div>
-        <div className='AdminSignupimg_Goback_Arrow' onClick={() => navigate('/adminsignup2')}>
+        <div className='AdminSignupimg_Goback_Arrow' onClick={() => navigate('/usersignup2')}>
           <IoIosArrowRoundBack style={{ color: '#253D35', width: '40px', height: '40px' }} />
           <p>Go Back</p>
         </div>
@@ -41,4 +41,4 @@ function AdminSIgnupImg() {
   )
 }
 
-export default AdminSIgnupImg
+export default UserSignupImg

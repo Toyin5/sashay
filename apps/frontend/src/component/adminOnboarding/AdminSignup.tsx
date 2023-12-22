@@ -1,8 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import './AdminLogin.css'
 import './AdminSignup.css'
-// import { CiFaceSmile } from "react-icons/ci";
-// import { CiFaceSmile } from "react-icons/ci";
 import { IoIosArrowRoundBack } from "react-icons/io";
 function AdminSignup() {
   const navigate = useNavigate()

@@ -10,36 +10,38 @@ function AdminResetPassword() {
 
   const showPasswords = () => {
     setShowPassword(!showPassword);
-};
-const showPasswords2 = () => {
-  setShowPassword2(!showPassword2);
-};
+  };
+  const showPasswords2 = () => {
+    setShowPassword2(!showPassword2);
+  };
   return (
     <div className="AdminResetPassword_Main">
-      <div className='AdminForgotPassword_Header'>
+      <div className='AdminResetPassword_Header'>
         <img src="./Logo.svg" alt='logo' />
-        <div className='AdminSignupimg_Goback_Arrow' onClick={() => navigate('/adminlogin')}>
+        <div className='Adminresetpassword_Goback_Arrow' onClick={() => navigate('/adminlogin')}>
           <IoIosArrowRoundBack style={{ color: '#253D35', width: '40px', height: '40px' }} />
           <p>Go Back</p>
         </div>
       </div>
       <div className='AdminResetPassword_Body'>
         <div className='AdminResetPassword_Body_Right'>
-          <h2>Reset Your Password?</h2>
-          <p>Enter the e mail address associated with your<br /> account to receive a mail.</p>
-          <div className='AdminResetPasswordInput_Wrap'>
-            <input type={showPassword ? 'text' : 'password'} placeholder='Enter Your New Password' />
-            <div className="password-toggle" onClick={showPasswords}>
-              {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
+          <div className='AdminResetPassword_Body_Right_Wrap'>
+            <h2>Reset Your Password?</h2>
+            <p>Enter the e mail address associated with your<br /> account to receive a mail.</p>
+            <div className='AdminResetPasswordInput_Wrap'>
+              <input type={showPassword ? 'text' : 'password'} placeholder='Enter Your New Password' className='AdminResetPassword_input'  />
+              <div className="password-toggle" onClick={showPasswords}>
+                {showPassword ? <FaRegEyeSlash /> : <FaRegEye />}
+              </div>
             </div>
-          </div>
-          <div className='AdminResetPasswordInput_Wrap'>
-          <input type={showPassword2 ? 'text' : 'password'} placeholder='Confirm Your New Password' />
-            <div className="password-toggle" onClick={showPasswords2}>
-              {showPassword2 ? <FaRegEyeSlash /> : <FaRegEye />}
+            <div className='AdminResetPasswordInput_Wrap'>
+              <input type={showPassword2 ? 'text' : 'password'} placeholder='Confirm Your New Password' className='AdminResetPassword_input' />
+              <div className="password-toggle" onClick={showPasswords2}>
+                {showPassword2 ? <FaRegEyeSlash /> : <FaRegEye />}
+              </div>
             </div>
+            <p>Remember it?  Back to Login</p>
           </div>
-          <p>Remember it?  Back to Login</p>
         </div>
         <div className='AdminResetPassword_Body_Left'>
           <img src='./resetimg.svg' alt='logo' />

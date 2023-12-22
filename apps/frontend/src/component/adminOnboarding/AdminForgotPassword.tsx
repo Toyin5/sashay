@@ -6,7 +6,7 @@ function AdminForgotPassword() {
   const navigate = useNavigate()
   return (
     <div className='AdminForgotPassword_Main'>
-      <div className='AdminForgotPassword_Header'>
+      <div className='AdminForgetPassword_Header'>
         <img src="./Logo.svg" alt='logo' />
         <div className='AdminSignupimg_Goback_Arrow' onClick={() => navigate('/adminlogin')}>
           <IoIosArrowRoundBack style={{ color: '#253D35', width: '40px', height: '40px' }} />
@@ -24,8 +24,8 @@ function AdminForgotPassword() {
          </div>
          <div className='AdminForgotPassword_Body_Right'>
           <h2>Forgot Your Password?</h2>
-          <p>Enter the e mail address associated with your<br/> account to receive a mail.</p>
-          <input type='text' placeholder='Email'/>
+          <p>Enter the email address associated with your<br/> account to receive a mail.</p>
+          <input type='text' placeholder='Email' className='AdminForgotPasswordInput'/>
           <p>Remember it?  Back to Login</p>
          </div>
       </div>

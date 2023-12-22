@@ -9,6 +9,10 @@ import AdminSignup2 from './component/adminOnboarding/AdminSignup2'
 import AdminSIgnupImg from './component/adminOnboarding/AdminSIgnupImg'
 import AdminForgotPassword from './component/adminOnboarding/AdminForgotPassword'
 import AdminResetPassword from './component/adminOnboarding/AdminResetPassword'
+import UserResetPassword from './component/userOnboarding/UserResetPassword'
+import UserForgotPassword from './component/userOnboarding/UserForgotPassword'
+import UserSignupImg from './component/userOnboarding/UserSignupImg'
+import UserSignup2 from './component/userOnboarding/UserSignup2'
 const App: React.FC = () => {
 
   return (
@@ -24,6 +28,10 @@ const App: React.FC = () => {
             <Route path='adminresetpassword/:id' element={<AdminResetPassword/>}/>
             <Route path='userlogin' element={<UserLogin/>}/>
             <Route path='usersignup' element={<UserSignup/>}/>
+            <Route path='usersignup2' element={<UserSignup2/>}/>
+            <Route path='usersignup3' element={<UserSignupImg/>}/>
+            <Route path='user_resetPassword' element={<UserResetPassword/>}/>
+            <Route path='user_forgotpassword' element={<UserForgotPassword/>}/>
          </Routes>
        </HashRouter>
     </div>
