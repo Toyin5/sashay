@@ -1,40 +1,24 @@
 import { RequestHandler } from "express";
 import User from "../models/user.model";
 import bcrypt from "bcrypt";
-import { UserData, userInputSchemaInterface } from "../interfaces/user.interface";
+import { UserData } from "../interfaces/user.interface";
 import { generateUserToken } from "../helpers/json.web.token";
-import { Content } from "mailgen";
-import mailGenerator from "../utils/mail.generator";
-import mailSender from "../middlewares/mailService";
-
+import { generateToken } from "../helpers/generateToken";
+import { sendVerificationEmail } from "../helpers/mailServices";
 
 export const signUpUser: RequestHandler = async (req, res) => {
   try {
-    const { email, username, password, phoneNumber, image, imageCloudId } = req.body;
+    const { email, username, password, phoneNumber, image, imageCloudId } =
+      req.body;
     const Email = await User.findOne({ email });
     if (Email) {
       return res.status(400).json({
-        message: 'Email already taken.'
-      })
-    };
-    const hashPassword = await bcrypt.hash(password, 7)
+        message: "Email already taken.",
+      });
+    }
+    const hashPassword = await bcrypt.hash(password, 7);
 
-    // generate a random verification code
-    const verifyToken = () => {
-      const digits = '0123456789';
-      let uniqueNumber = '';
-
-      while (uniqueNumber.length < 6) {
-        const randomDigit = digits.charAt(Math.floor(Math.random() * digits.length));
-
-        if (!uniqueNumber.includes(randomDigit)) {
-          uniqueNumber += randomDigit;
-        }
-      }
-
-      return uniqueNumber;
-    };
-    const verificationCode = parseInt(verifyToken());
+    const verificationCode = parseInt(generateToken());
 
     const userData: UserData = {
       username,
@@ -43,7 +27,7 @@ export const signUpUser: RequestHandler = async (req, res) => {
       phoneNumber,
       verificationNumber: verificationCode,
       image,
-      imageCloudId
+      imageCloudId,
     };
 
     const userInstance = new User(userData);
@@ -53,39 +37,20 @@ export const signUpUser: RequestHandler = async (req, res) => {
 
     //send an email to the user who signed up!
 
-    const emailContent = {
-      body: {
-        name: userInstance.username,
-        intro: 'Welcome to Your Sashay store! Your verification code is:',
-        code: verificationCode,
-        outro: 'Need help, or have questions? Just reply to this email.',
-      },
-    };
-    const emailBody = mailGenerator.generate(emailContent);
-    const emailText = mailGenerator.generatePlaintext(emailContent);
-
-    const mailService = new mailSender();
-    mailService.createConnection();
-    mailService.mail({
-      from: {
-        address: <string>process.env.EMAIL
-      },
+    await sendVerificationEmail({
       email: userInstance.email,
-      subject: "Kindly verify!",
-      message: emailText,
-      html: emailBody
+      username: userInstance.username,
+      code: verificationCode,
     });
-
 
     return res.status(201).json({
       success: true,
-      data: userInstance
-    })
-
+      data: userInstance,
+    });
   } catch (error: any) {
     return res.status(500).json({
       success: false,
-      message: error.message
-    })
+      message: error.message,
+    });
   }
-}
+};
