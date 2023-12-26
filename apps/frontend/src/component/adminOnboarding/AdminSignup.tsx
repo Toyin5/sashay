@@ -2,9 +2,30 @@ import { useNavigate } from 'react-router-dom';
 import './AdminLogin.css'
 import './AdminSignup.css'
 import { IoIosArrowRoundBack } from "react-icons/io";
+import { useForm } from 'react-hook-form'
+import { AdminSignupValue } from '../interfaces/AdminSignup.type';
+import { yupResolver } from '@hookform/resolvers/yup'
+// import * as yup from 'yup'
+import { AdminsignUpSchema } from '../schema/AdminsignupSchema';
 function AdminSignup() {
   const navigate = useNavigate()
 
+  // const date = new Date(new Date().toISOString().split('T')[0])
+  const form = useForm<AdminSignupValue>({
+    defaultValues: {
+      email: '',
+      password: '',
+      date: ''
+    },
+    resolver: yupResolver<any>(AdminsignUpSchema)
+  });
+  const { register, handleSubmit, formState: { errors } } = form;
+
+  const submit = (data: AdminSignupValue) => {
+    localStorage.setItem('userData', JSON.stringify(data));
+    console.log('form submitted successfully', data)
+    navigate('/adminsignup2')
+  }
   return (
     <div className='AdminLogin_Main'>
       <div className='AdminSignup_Left'>
@@ -13,27 +34,42 @@ function AdminSignup() {
         </div>
         <div className='AdminLogin_Left_Wrap'>
           <h2>Create a Vendor Account</h2>
-          <form className='AdminLogin_Form'>
+          <form className='AdminLogin_Form' onSubmit={handleSubmit(submit)} noValidate>
             <label className='AdminLogin_Email_Wrap'>
               <p>Email</p>
-              <input placeholder='example@gmail.com' className='AdminLogin_Email_Input' />
+              <input
+                placeholder='example@gmail.com'
+                className='AdminLogin_Email_Input'
+                {...register('email')}
+              />
+              <b className='adminLogin_error_msg'>{errors.email?.message}</b>
             </label>
             <label className='AdminLogin_Email_Wrap'>
-              <input placeholder='Password' className='AdminLoginPassword_Input' type='password' />
-              
+              <input
+                placeholder='Password'
+                className='AdminLoginPassword_Input'
+                type='password'
+                {...register('password')}
+              />
+              <b className='adminLogin_error_msg'>{errors.password?.message}</b>
             </label>
             <label className='AdminLogin_Email_Wrap'>
-              <input className='AdminLoginPassword_Input' type='Date' />
+              <input
+                className='AdminLoginPassword_Input'
+                type='Date'
+                {...register('date')}
+              />
+              <b className='adminLogin_error_msg'>{errors.date && errors.date?.message}</b>
             </label>
             <div className='AdminLogin_Forgot_Remeberme'>
               <span style={{ display: "flex", alignItems: "center", gap: "5px" }}>
                 <input type="checkbox" />
                 <p>Remember me</p>
               </span>
-              {/* <p>Forgot Password</p> */}
             </div>
             <div>
-              <button className='Admin_login_signin_button' onClick={() => navigate('/adminsignup2')}>Proceed</button>
+              <button className='Admin_login_signin_button'onClick={handleSubmit(submit)} >Proceed</button>
+              {/* <button className='Admin_login_signin_button' onClick={() => { console.log('Button clicked'); navigate('/adminsignup2'); }}>Proceed</button> */}
             </div>
             <span className='AdminLogin_Terms_Condition'>
               <p>Privacy</p>
