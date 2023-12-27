@@ -14,6 +14,7 @@ export const AdminsignUpSchema = yup.object(
         date: yup.date().required("Date is required").typeError("Date is required"),
     }
 )
+.required()
 
 export const Adminsignup2Schema = yup.object({
     firstName: yup.string().required("First name must not contain any special character")
@@ -32,7 +33,9 @@ export const Adminsignup2Schema = yup.object({
         .matches(/^0[789]\d{9}$/,
             "Please enter a valid phone number. Phone numbers can be in the following formats"
         ),
-})
+}
+)
+.required()
 
 export const AdminsignupImgSchema = yup.object({
     avatar: yup
@@ -44,4 +47,6 @@ export const AdminsignupImgSchema = yup.object({
       .test('fileType', 'Invalid file type', (value: any) => {
         return value && ['image/jpeg', 'image/png'].includes(value.type);
       }),
-  });
+  }
+  )
+  .required()

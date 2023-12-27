@@ -7,6 +7,8 @@ import { useDropzone } from 'react-dropzone';
 import { AdminSignupValue } from '../interfaces/AdminSignup.type';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { AdminsignupImgSchema } from '../schema/AdminsignupSchema';
+import { useMutation } from '@tanstack/react-query';
+import { adminSignup } from '../api/Mutation';
 function AdminSIgnupImg() {
   const baseStyle: React.CSSProperties = {
     flex: 1,
@@ -22,17 +24,17 @@ function AdminSIgnupImg() {
     color: '#bdbdbd',
     outline: 'none',
     transition: 'border .24s ease-in-out',
-    justifyContent:'center'
+    justifyContent: 'center'
   };
-  
+
   const focusedStyle = {
     borderColor: '#2196f3'
   };
-  
+
   const acceptStyle = {
     borderColor: '#00e676'
   };
-  
+
   const rejectStyle = {
     borderColor: '#ff1744'
   };
@@ -45,7 +47,7 @@ function AdminSIgnupImg() {
     resolver: yupResolver<any>(AdminsignupImgSchema)
   });
 
-  const { register, handleSubmit, setValue, formState: {errors} } = form;
+  const { register, handleSubmit, setValue, formState: { errors } } = form;
 
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
 
@@ -54,15 +56,15 @@ function AdminSIgnupImg() {
     setValue('avatar', acceptedFiles[0]);
   };
 
-  const { getRootProps, getInputProps, open , isFocused,
+  const { getRootProps, getInputProps, open, isFocused,
     isDragAccept,
-    isDragReject} = useDropzone({
-    noClick: true,
-    onDrop,
-    accept: {
-      'image/*': ['.jpeg', '.png']
-    },
-  });
+    isDragReject } = useDropzone({
+      noClick: true,
+      onDrop,
+      accept: {
+        'image/*': ['.jpeg', '.png']
+      },
+    });
   const style = useMemo(() => ({
     ...baseStyle,
     ...(isFocused ? focusedStyle : {}),
@@ -73,30 +75,26 @@ function AdminSIgnupImg() {
     isDragAccept,
     isDragReject
   ]);
+  const { mutate } = useMutation(['adminSignup'], adminSignup, {
+    onSuccess: (data: any) => {
+      console.log(data)
+    },
+    onError: () => {
+
+    }
+  })
   const submit = (data: AdminSignupValue) => {
-    // Get existing data from local storage
-    const existingDataString = localStorage.getItem('userData');
+    const existingDataString = localStorage.getItem('adminData');
     const existingData = existingDataString ? JSON.parse(existingDataString) : {};
-
-    // Add the avatar information to the data object
     const dataWithAvatar = { ...data, avatar: uploadedFiles[0] || null };
-
-    // Update the existing data with the new data
     const updatedData = { ...existingData, ...dataWithAvatar };
-
-    // Store the updated data in local storage
-    localStorage.setItem('userData', JSON.stringify(updatedData));
-
-    // Log for testing purposes
+    localStorage.setItem('adminData', JSON.stringify(updatedData));
     console.log('form submitted successfully', updatedData);
-
-    // Clear the uploaded files
     setUploadedFiles([]);
+    mutate(updatedData)
   };
   useEffect(() => {
-    // Load existing data from local storage on component mount
-    const storedDataString = localStorage.getItem('userData');
-
+    const storedDataString = localStorage.getItem('adminData');
     if (storedDataString) {
       const storedData = JSON.parse(storedDataString);
       if ('avatar' in storedData) {
@@ -130,10 +128,10 @@ function AdminSIgnupImg() {
             <img src="./female.svg" alt="" className='Avatar2' onClick={open} />
           </div>
         )}
-        <div {...getRootProps({style})} className="dropzone" >
-          <input 
-          {...getInputProps()} 
-          {...register('avatar')}
+        <div {...getRootProps({ style })} className="dropzone" >
+          <input
+            {...getInputProps()}
+            {...register('avatar')}
           />
           <p onClick={open}>Drag 'n' drop an image, or Upload your image here</p>
         </div>

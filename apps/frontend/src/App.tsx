@@ -13,6 +13,8 @@ import UserResetPassword from './component/userOnboarding/UserResetPassword'
 import UserForgotPassword from './component/userOnboarding/UserForgotPassword'
 import UserSignupImg from './component/userOnboarding/UserSignupImg'
 import UserSignup2 from './component/userOnboarding/UserSignup2'
+
+
 const App: React.FC = () => {
 
   return (

@@ -22,7 +22,7 @@ function AdminSignup() {
   const { register, handleSubmit, formState: { errors } } = form;
 
   const submit = (data: AdminSignupValue) => {
-    localStorage.setItem('userData', JSON.stringify(data));
+    localStorage.setItem('adminData', JSON.stringify(data));
     console.log('form submitted successfully', data)
     navigate('/adminsignup2')
   }
