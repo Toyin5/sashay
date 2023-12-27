@@ -5,7 +5,13 @@
     align-items: center;
     justify-content: center;
 }
-
+.adminLogin_error_msg{
+    width: 98%;
+    font-size: 15px;
+    font-weight: 100;
+    font-family: 'Quicksand';
+    color: red;
+}
 .AdminLogin_Wrap {
     width: 100%;
     height: 100vh;
@@ -84,9 +90,9 @@
 
 .AdminLogin_Email_Wrap p {
     position: absolute;
-    padding: 10px;
-    top: -20px;
-    left: 10px;
+    /* padding: 10px; */
+    top: -10px;
+    left: 15px;
     background-color: white;
 }
 
@@ -389,6 +395,13 @@
         /* background-color: red; */
         font-size: 13px;
     }
+    .AdminLogin_Email_Wrap p {
+        position: absolute;
+        padding: 0px;
+        top: -10px;
+        left: 20px;
+        background-color: white;
+    }
 }
 @media screen and (max-width: 425px){
     .AdminLogin_Form{
@@ -400,5 +413,12 @@
         display: flex;
         justify-content: space-between;
         /* background-color: red; */
+    }
+    .AdminLogin_Email_Wrap p {
+        position: absolute;
+        padding: 0px;
+        top: -10px;
+        left: 20px;
+        background-color: white;
     }
 }
