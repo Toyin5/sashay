@@ -12,14 +12,6 @@ app.use(fileUpload({
   useTempFiles: true
 }));
 
-<<<<<<< HEAD
-app.all("*", (req: Request, res: Response) => {
-  res.status(404).json({
-    message: `This Route ${req.originalUrl} does not exist on this Server`
-  })
-})
-=======
->>>>>>> b41b771 (admin verify)
 
 app.use("/api/v1", userRouter);
 

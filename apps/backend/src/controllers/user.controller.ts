@@ -3,16 +3,11 @@ import User from "../models/user.model";
 import bcrypt from "bcrypt";
 import { UserData } from "../interfaces/user.interface";
 import { generateUserToken } from "../helpers/json.web.token";
-<<<<<<< HEAD
-import { generateToken } from "../helpers/generateToken";
-import { sendVerificationEmail } from "../helpers/mailServices";
-=======
 import { Content } from "mailgen";
 import mailGenerator from "../utils/mail.generator";
 import mailSender from "../middlewares/mailService";
 import verificationCode from "../helpers/generate.code";
 
->>>>>>> b41b771 (admin verify)
 
 export const signUpUser: RequestHandler = async (req, res) => {
   try {
@@ -26,11 +21,6 @@ export const signUpUser: RequestHandler = async (req, res) => {
     }
     const hashPassword = await bcrypt.hash(password, 7);
 
-<<<<<<< HEAD
-    const verificationCode = parseInt(generateToken());
-
-=======
->>>>>>> b41b771 (admin verify)
     const userData: UserData = {
       username,
       email,
@@ -48,12 +38,6 @@ export const signUpUser: RequestHandler = async (req, res) => {
 
     //send an email to the user who signed up!
 
-<<<<<<< HEAD
-    await sendVerificationEmail({
-      email: userInstance.email,
-      username: userInstance.username,
-      code: verificationCode,
-=======
     const emailContent = {
       body: {
         name: userInstance.username,
@@ -75,7 +59,6 @@ export const signUpUser: RequestHandler = async (req, res) => {
       subject: "Kindly verify!",
       message: emailText,
       html: emailBody
->>>>>>> b41b771 (admin verify)
     });
 
     return res.status(201).json({
@@ -89,8 +72,6 @@ export const signUpUser: RequestHandler = async (req, res) => {
     });
   }
 };
-<<<<<<< HEAD
-=======
 
 export const verifyUsersAccount: RequestHandler = async (req, res) => {
   try {
@@ -115,4 +96,3 @@ export const verifyUsersAccount: RequestHandler = async (req, res) => {
     })
   }
 }
->>>>>>> b41b771 (admin verify)

@@ -1,15 +1,4 @@
 import ServerError from "../errors/server.error";
-<<<<<<< HEAD
-import Admin from "../models/admin.model";
-import { RequestHandler } from "express";
-
-
-export const registerAdmin: RequestHandler = async (request, response) => {
-  try {
-
-  } catch (error: any) {
-    return response.status(500).json({
-=======
 import { generateAdminToken } from "../helpers/json.web.token";
 import Admin from "../models/admin.model";
 import bcrypt from "bcrypt";
@@ -90,13 +79,10 @@ export const registerAdmin: RequestHandler = async (req, res) => {
 
   } catch (error: any) {
     return res.status(500).json({
->>>>>>> b41b771 (admin verify)
       success: false,
       message: error.message,
     })
   }
-<<<<<<< HEAD
-=======
 }
 
 export const verifyAdminAccount: RequestHandler = async (req, res) => {
@@ -121,5 +107,4 @@ export const verifyAdminAccount: RequestHandler = async (req, res) => {
       message: error.message
     })
   }
->>>>>>> b41b771 (admin verify)
 }
