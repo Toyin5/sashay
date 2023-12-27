@@ -12,8 +12,6 @@ export interface AdminInterface extends Document {
   verified: boolean;
   isAdmin: boolean;
   verificationCode: number;
-<<<<<<< HEAD
-=======
 };
 
 export interface AdminInputInterface {
@@ -33,5 +31,4 @@ export interface AdminInputSchema {
   phoneNumber: string;
   firstName: string;
   lastName: string;
->>>>>>> b41b771 (admin verify)
 }
