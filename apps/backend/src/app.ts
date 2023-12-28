@@ -3,6 +3,7 @@ import cors from "cors";
 import userRouter from "./routers/user.route";
 import fileUpload from "express-fileupload";
 import adminRouter from "./routers/admin.route";
+import productRouter from "./routers/product.route";
 
 const app = express();
 
@@ -16,6 +17,9 @@ app.use(fileUpload({
 app.use("/api/v1", userRouter);
 
 app.use("/api/v1", adminRouter);
+
+app.use("/api/v1", productRouter);
+
 
 app.all("*", (req: Request, res: Response) => {
   res.status(404).json({

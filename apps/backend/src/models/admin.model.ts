@@ -43,7 +43,11 @@ const adminSchema = new mongoose.Schema({
   },
   verificationCode: {
     type: Number
-  }
+  },
+  products: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "product"
+  }]
 }, {
   timestamps: true,
   versionKey: false

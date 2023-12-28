@@ -12,6 +12,7 @@ export interface AdminInterface extends Document {
   verified: boolean;
   isAdmin: boolean;
   verificationCode: number;
+  products: Array<object>;
 };
 
 export interface AdminInputInterface {
