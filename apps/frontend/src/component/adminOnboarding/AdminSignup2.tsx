@@ -21,15 +21,15 @@ function AdminSignup2() {
     const { register, handleSubmit, formState: { errors }, setValue } = form;
 
     const submit = (data: AdminSignupValue) => {
-        const existingDataString = localStorage.getItem('userData');
+        const existingDataString = localStorage.getItem('adminData');
         const existingData: AdminSignupValue = existingDataString ? JSON.parse(existingDataString) : {};
         const updatedData = { ...existingData, ...data };
-        localStorage.setItem('userData', JSON.stringify(updatedData));
+        localStorage.setItem('adminData', JSON.stringify(updatedData));
         console.log('form submitted successfully', updatedData);
         navigate('/adminsignup3')
     }
     useEffect(() => {
-        const storedDataString = localStorage.getItem('userData');
+        const storedDataString = localStorage.getItem('adminData');
         if (storedDataString) {
             const storedData = JSON.parse(storedDataString);
             Object.entries(storedData).forEach(([key, value]) => {
