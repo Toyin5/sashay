@@ -107,4 +107,27 @@ export const verifyAdminAccount: RequestHandler = async (req, res) => {
       message: error.message
     })
   }
+};
+
+
+export const singleAdmin: RequestHandler = async (req, res) => {
+  try {
+    const adminId = req.params.adminId;
+    const admin = await Admin.findById(adminId).populate("products");
+    if (!admin) {
+      return res.status(404).json({
+        message: 'Admin not found'
+      })
+    } else {
+      return res.status(200).json({
+        status: true,
+        data: admin
+      })
+    }
+  } catch (error: any) {
+    return res.status(500).json({
+      success: false,
+      message: error.message
+    })
+  }
 }
