@@ -55,3 +55,26 @@ export const uploadProduct: RequestHandler = async (req, res) => {
   }
 };
 
+
+export const singleProduct: RequestHandler = async (req, res) => {
+  try {
+    const productId = req.params.id;
+    const product = await Product.findById(productId);
+    if (!product) {
+      return res.status(404).json({
+        message: "Product not found"
+      })
+    } else {
+      return res.status(200).json({
+        success: true,
+        data: product
+      })
+    }
+  } catch (error: any) {
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+      status: "Failed"
+    })
+  }
+}
