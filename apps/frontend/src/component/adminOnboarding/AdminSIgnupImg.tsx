@@ -7,8 +7,8 @@ import { useDropzone } from 'react-dropzone';
 import { AdminSignupValue } from '../interfaces/AdminSignup.type';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { AdminsignupImgSchema } from '../schema/AdminsignupSchema';
-import { useMutation } from '@tanstack/react-query';
-import { adminSignup } from '../api/Mutation';
+// import { useMutation } from '@tanstack/react-query';
+// import { adminSignup } from '../api/Mutation';
 function AdminSIgnupImg() {
   const baseStyle: React.CSSProperties = {
     flex: 1,
@@ -75,14 +75,14 @@ function AdminSIgnupImg() {
     isDragAccept,
     isDragReject
   ]);
-  const { mutate } = useMutation(['adminSignup'], adminSignup, {
-    onSuccess: (data: any) => {
-      console.log(data)
-    },
-    onError: () => {
+  // const { mutate } = useMutation(['adminSignup'], adminSignup, {
+  //   onSuccess: (data: any) => {
+  //     console.log(data)
+  //   },
+  //   onError: () => {
 
-    }
-  })
+  //   }
+  // })
   const submit = (data: AdminSignupValue) => {
     const existingDataString = localStorage.getItem('adminData');
     const existingData = existingDataString ? JSON.parse(existingDataString) : {};
@@ -91,7 +91,8 @@ function AdminSIgnupImg() {
     localStorage.setItem('adminData', JSON.stringify(updatedData));
     console.log('form submitted successfully', updatedData);
     setUploadedFiles([]);
-    mutate(updatedData)
+    // mutate(updatedData)
+    navigate('/admindashboard')
   };
   useEffect(() => {
     const storedDataString = localStorage.getItem('adminData');
