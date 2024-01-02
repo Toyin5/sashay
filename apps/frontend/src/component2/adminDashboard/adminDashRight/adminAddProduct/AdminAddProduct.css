@@ -1,0 +1,288 @@
+.AdminAddProduct_Main {
+    width: 100%;
+    height: 100%;
+}
+
+.AdminAddProduct_Main_wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.AdminAddProduct_Header {
+    width: 100%;
+    height: 10%;
+    /* background-color: red; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+
+}
+
+.AdminAddProductRoute_Name {
+    font-size: 25px;
+    font-family: 'Quicksand';
+    font-weight: 700;
+    color: #253D35;
+}
+
+.AdminAddProduct_UploadArea {
+    width: 100%;
+    height: 90%;
+    display: flex;
+
+}
+
+.AdminAddProduct_ImagePreview {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AdminAddProduct_UploadArea_Image_Wrap {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.AdminAddProduct_UploadArea_Input_Main {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AdminAddProduct_UploadArea_Input_wrap {
+    width: 90%;
+    height: 95%;
+    /* background-color: red; */
+}
+
+.AdminAddProductInputHeader {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.AdminAddProductInputHeader p {
+    width: 80%;
+    font-size: 25px;
+    justify-content: center;
+    color: #253D35;
+    font-family: 'Quicksand';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.7px;
+}
+
+.dropzone {
+    width: 90%;
+    height: 100%;
+}
+
+.UploadImg {
+    width: 150px;
+    height: 200px;
+}
+
+.DropZoneText {
+    color: #253D35;
+    font-family: 'Quicksand';
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 3.3px;
+}
+
+.or {
+    color: #253D35;
+    font-family: 'Quicksand';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 2.88px;
+}
+
+.Browse {
+    margin-top: 40px;
+    width: 300px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #253D35;
+    border: none;
+    color: white;
+    font-size: 25px;
+    font-family: 'Quicksand';
+    cursor: pointer;
+}
+
+.AdminAddProductInput_wrap {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.ProductName_Wrap {
+    width: 88%;
+    position: relative;
+}
+
+.ProductName_Wrap p {
+    position: absolute;
+    /* padding: 10px; */
+    top: -10px;
+    left: 20px;
+    background-color: #E4E9EF;
+}
+
+.ProductInput {
+    width: 500px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 16px;
+    border: 2px solid #253D35;
+    background: transparent;
+    outline: none;
+}
+
+.Product_Details {
+    width: 500px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 16px;
+    border: 2px solid #253D35;
+    background: transparent;
+    outline: none;
+
+}
+
+.AdminAddProductAction {
+    width: 85%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.AdminAddProductAction span {
+    display: flex;
+    gap: 20px;
+}
+
+.ProductType select {
+    width: 100px;
+    background-color: transparent;
+    outline: none;
+
+
+}
+
+.ProductQuantity select {
+    width: 100px;
+    background-color: transparent;
+    outline: none;
+}
+
+.AdminAddProductButton_Wrap {
+    width: 95%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: red; */
+}
+
+.AdminAddProductButton {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: #253D35;
+    color: white;
+    cursor: pointer;
+}
+
+.AdminAddProduct_Upload_option {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.403);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AdminAddProduct_Upload_option_wrap {
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.AdminAddProduct_Upload_option_wrap h2 {
+    color: #253D35;
+    text-align: center;
+    font-family: 'Quicksand';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 3.3px;
+}
+
+.AdminAddProduct_Upload_option_wrap p {
+    color: #253D35;
+    text-align: center;
+    font-family: 'Quicksand';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 2.16px;
+}
+
+.AdminAddProduct_Upload_option_buttons_wrap {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* background-color: red; */
+    margin-top: 30px;
+}
+
+.AdminAddProduct_Upload_option_buttons {
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #253D35;
+    font-size: 18px;
+    font-family: 'Quicksand';
+    cursor: pointer;
+}

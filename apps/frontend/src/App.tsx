@@ -13,6 +13,7 @@ import UserResetPassword from './component/userOnboarding/UserResetPassword'
 import UserForgotPassword from './component/userOnboarding/UserForgotPassword'
 import UserSignupImg from './component/userOnboarding/UserSignupImg'
 import UserSignup2 from './component/userOnboarding/UserSignup2'
+import AdminDashBoard from './component2/adminDashboard/AdminDashBoard'
 
 
 const App: React.FC = () => {
@@ -23,17 +24,18 @@ const App: React.FC = () => {
          <Routes>
             <Route path='/' element={<Body/>}/>
             <Route path='/adminlogin' element={<AdminLogin/>}/>
-            <Route path='adminsignup' element={<AdminSignup/>}/>
-            <Route path='adminsignup2' element={<AdminSignup2/>}/>
-            <Route path='adminsignup3' element={<AdminSIgnupImg/>}/>
-            <Route path='adminforgotpassword' element={<AdminForgotPassword/>}/>
-            <Route path='adminresetpassword/:id' element={<AdminResetPassword/>}/>
-            <Route path='userlogin' element={<UserLogin/>}/>
-            <Route path='usersignup' element={<UserSignup/>}/>
-            <Route path='usersignup2' element={<UserSignup2/>}/>
-            <Route path='usersignup3' element={<UserSignupImg/>}/>
-            <Route path='user_resetPassword' element={<UserResetPassword/>}/>
-            <Route path='user_forgotpassword' element={<UserForgotPassword/>}/>
+            <Route path='/adminsignup' element={<AdminSignup/>}/>
+            <Route path='/adminsignup2' element={<AdminSignup2/>}/>
+            <Route path='/adminsignup3' element={<AdminSIgnupImg/>}/>
+            <Route path='/adminforgotpassword' element={<AdminForgotPassword/>}/>
+            <Route path='/adminresetpassword/:id' element={<AdminResetPassword/>}/>
+            <Route path='/userlogin' element={<UserLogin/>}/>
+            <Route path='/usersignup' element={<UserSignup/>}/>
+            <Route path='/usersignup2' element={<UserSignup2/>}/>
+            <Route path='/usersignup3' element={<UserSignupImg/>}/>
+            <Route path='/user_resetPassword' element={<UserResetPassword/>}/>
+            <Route path='/user_forgotpassword' element={<UserForgotPassword/>}/>
+            <Route path='/admindashboard/*' element={<AdminDashBoard/>}/>
          </Routes>
        </HashRouter>
     </div>
