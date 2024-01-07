@@ -23,7 +23,6 @@ function AdminAddProduct() {
     transition: 'border .24s ease-in-out',
     justifyContent: 'center'
   };
-
   const focusedStyle = {
     borderColor: '#2196f3'
   };
@@ -83,7 +82,6 @@ function AdminAddProduct() {
               </div>
             </div>
           }
-
           <div className='AdminAddProduct_UploadArea_Input_Main'>
             <div className='AdminAddProduct_UploadArea_Input_wrap'>
               <div className='AdminAddProductInputHeader'>

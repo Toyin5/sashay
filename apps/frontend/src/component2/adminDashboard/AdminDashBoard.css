@@ -6,12 +6,12 @@
 .AdminDashboardLeft_Wrap{
     width: 10%;
     height: 100%;
-    background: #253D35;
+    background: #EBEDEC;
 }
 .AdminDashboardRight_Wrap{
     width: 90%;
     height: 100%;
-    background: #E4E9EF;
+    background: #fff;
     display: flex;
     align-items: center;
 }
